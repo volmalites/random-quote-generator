@@ -63,7 +63,7 @@ const quotes = [
   },
   {
     quote: 'People like us, who believe in physics, know that the distinction between past, present and future is only a stubbornly persistent illusion.',
-    source: 'Albert Einstien',
+    source: 'Albert Einstein',
     citation: 'Letter to Michele Besso',
     year: 1955,
     photo: 'img/albert.jpg'
@@ -98,7 +98,7 @@ const INTERVAL = 10000;
  * Function utilizing the javascript Math object in order to obtain a random quote object from the quotes array
 ***/
 function getRandomQuote() {
-  // Below is an old method that I am replacing in order to prevent duplicates and improve upon the repetiveness issue, I want to make it "more random"
+  // Below is an old method that I am replacing in order to prevent duplicates and improve upon the repetitiveness issue, I want to make it "more random"
   // let randNum =  Math.floor((Math.random() * quotes.length));
   // return quotes[randNum];
 
@@ -116,11 +116,11 @@ function getRandomQuote() {
     keysList.splice(keysList.indexOf(randNum), 1);
     return randQuote;
   }
-  //I am certain this still satisfies the desired outcome: 'returns a random object from the quotes array', please don't penalise my autism...
+  //I am certain this still satisfies the desired outcome: 'returns a random object from the quotes array', please don't penalize my autism...
 }
 
 /***
- * Function that parses and concatonates an object containing the quote and inserts it into the HTML page
+ * Function that parses and concatenates an object containing the quote and inserts it into the HTML page
 ***/
 function printQuote() {
   const quote = getRandomQuote();
@@ -133,7 +133,7 @@ function printQuote() {
     `;
   }
 
-  //Rest of the quote object is pasred below, checking if the citation and year are present
+  //Rest of the quote object is parsed below, checking if the citation and year are present
   parsedQuote += `
     <p class="quote"> ${ quote.quote } </p>
     <p class="source"> ${ quote.source } 
